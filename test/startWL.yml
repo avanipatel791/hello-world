@@ -1,0 +1,13 @@
+---
+- name: Gathering facts
+  hosts: all
+  tasks: []
+
+- name: Start weblogic CPE servers
+  hosts: cpe
+  tasks:
+    - name: 005 - Start weblogic servers
+      service: 
+        name: weblogic
+        state: started
+        pattern: /etc/init.d/weblogic
