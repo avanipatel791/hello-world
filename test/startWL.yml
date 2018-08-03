@@ -11,3 +11,12 @@
         name: weblogic
         state: started
         pattern: /etc/init.d/weblogic
+
+- name: Start weblogic Portal servers
+  hosts: portal
+  tasks:
+    - name: 005 - Start weblogic servers
+      service: 
+        name: weblogic
+        state: started
+        pattern: /etc/init.d/weblogic
